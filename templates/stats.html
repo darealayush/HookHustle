@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Bot Overview</h2>
+<div class="card">
+    <img src="{{ bot_avatar }}" alt="Bot Avatar">
+    <p><b>Servers:</b> {{ guild_count }}</p>
+    <p><b>Total Members:</b> {{ total_members }}</p>
+    <p><b>Ping:</b> {{ ping }} ms</p>
+    <p><b>Uptime:</b> {{ uptime }}</p>
+</div>
+{% endblock %}

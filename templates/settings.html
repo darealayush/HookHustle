@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Bot Settings</h2>
+<div class="card">
+    <form method="POST">
+        <div>
+            <label>Bot Prefix:</label>
+            <input type="text" name="prefix" value="{{ config.prefix }}" maxlength="5">
+        </div>
+        <h3>Modules</h3>
+        {% for module, enabled in config.modules.items() %}
+            <div>
+                <input type="checkbox" name="{{ module }}" {% if enabled %}checked{% endif %}>
+                <label>{{ module|capitalize }}</label>
+            </div>
+        {% endfor %}
+        <br>
+        <button type="submit">Save Settings</button>
+    </form>
+</div>
+{% endblock %}

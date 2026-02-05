@@ -1,0 +1,9 @@
+{
+    "prefix": "?",
+    "modules": {
+        "leveling": true,
+        "economy": true,
+        "moderation": true,
+        "fun": true
+    }
+}

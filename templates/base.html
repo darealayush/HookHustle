@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bot Dashboard</title>
+    <style>
+        body { font-family: Arial; background: #202225; color: white; margin: 0; padding: 0; }
+        .navbar {
+            display: flex;
+            background: #2f3136;
+            padding: 10px 20px;
+            align-items: center;
+        }
+        .navbar a {
+            color: #7289da;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        .navbar a:hover { text-decoration: underline; }
+        .content { padding: 40px; text-align: center; }
+        .card { background: #36393f; padding: 30px; border-radius: 12px; width: 400px; margin: auto; margin-top: 20px; }
+        button { padding: 10px 20px; border: none; border-radius: 6px; background: #7289da; color: white; cursor: pointer; }
+        button:hover { background: #5b6eae; }
+        input[type="text"] { padding: 8px; border-radius: 6px; border: none; width: 100px; }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Dashboard</a>
+        <a href="/stats">Bot Overview</a>
+        <a href="/settings">Settings</a>
+        <a href="/logout">Logout</a>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
